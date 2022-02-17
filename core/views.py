@@ -35,7 +35,7 @@ class DadosJSONView(BaseLineChartView):
             'Programação em c',
             'Programação em JAva',
             'Programação em Python',
-            'Banco de Dados',
+            'Banco de Dados'
         ]
         return datasets
 
@@ -50,9 +50,8 @@ class DadosJSONView(BaseLineChartView):
         6 datasets, então 6 linhas
         """
         dados = []
-
-        for l in range(6):
-            for c in range(12):
+        for c in range(6):
+            for l in range(12):
                 dado = [
                     randint(1, 200),  # jan
                     randint(1, 200),  # fev
@@ -68,3 +67,4 @@ class DadosJSONView(BaseLineChartView):
                     randint(1, 200),  # dez
                 ]
             dados.append(dado)
+        return dados

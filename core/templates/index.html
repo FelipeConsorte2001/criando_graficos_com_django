@@ -23,12 +23,13 @@
 
 
 
-  {% bootstrp_javascript jquery='full' %}
+ {% bootstrap_javascript jquery='full' %}
   <script type="text/javascript" src="{% static 'js/Chart.min.js' %}"></script>
+
   <script type="text/javascript">
-      $.get('{% url "dados" %}'), function(data){
-        var ctx = $('#grafico').get(0).getContext("2d");
-        new Chart(ctx,{
+      $.get('{% url "dados" %}', function(data){
+        var ctx = $("#grafico").get(0).getContext("2d");
+        new Chart(ctx, {
             type: 'line', data: data
         });
       });
